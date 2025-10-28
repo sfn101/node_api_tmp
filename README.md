@@ -139,7 +139,7 @@ API route definitions with nested structure:
 
 ### HTTP Status Codes
 
-The API uses standardized HTTP status codes defined in [`httpStatusCode.js`](src/_shared/enums/httpStatusCode.js):
+The API uses standardized HTTP status codes defined in [`httpStatusCodes.js`](src/_shared/enums/httpStatusCodes.js):
 
 ```javascript
 export const STATUS_CODES = {
@@ -182,23 +182,23 @@ All API responses follow a consistent format:
 
 #### Users API
 
-| Method | Endpoint | Description | Status Code |
-|--------|----------|-------------|-------------|
-| GET | `/users` | Get all users with pagination | [`STATUS_CODES.OK`](src/_shared/enums/httpStatusCode.js) |
-| GET | `/users/:userId` | Get user by ID | [`STATUS_CODES.OK`](src/_shared/enums/httpStatusCode.js) |
-| POST | `/users` | Create new user | [`STATUS_CODES.CREATED`](src/_shared/enums/httpStatusCode.js) |
-| PUT | `/users/:userId` | Update user by ID | [`STATUS_CODES.OK`](src/_shared/enums/httpStatusCode.js) |
-| DELETE | `/users/:userId` | Delete user by ID | [`STATUS_CODES.NO_CONTENT`](src/_shared/enums/httpStatusCode.js) |
+| Method | Endpoint         | Description                   | Status Code                                                       |
+| ------ | ---------------- | ----------------------------- | ----------------------------------------------------------------- |
+| GET    | `/users`         | Get all users with pagination | [`STATUS_CODES.OK`](src/_shared/enums/httpStatusCodes.js)         |
+| GET    | `/users/:userId` | Get user by ID                | [`STATUS_CODES.OK`](src/_shared/enums/httpStatusCodes.js)         |
+| POST   | `/users`         | Create new user               | [`STATUS_CODES.CREATED`](src/_shared/enums/httpStatusCodes.js)    |
+| PUT    | `/users/:userId` | Update user by ID             | [`STATUS_CODES.OK`](src/_shared/enums/httpStatusCodes.js)         |
+| DELETE | `/users/:userId` | Delete user by ID             | [`STATUS_CODES.NO_CONTENT`](src/_shared/enums/httpStatusCodes.js) |
 
 #### Products API
 
-| Method | Endpoint | Description | Status Code |
-|--------|----------|-------------|-------------|
-| GET | `/users/:userId/products` | Get user's products | [`STATUS_CODES.OK`](src/_shared/enums/httpStatusCode.js) |
-| GET | `/users/:userId/products/:productId` | Get specific product | [`STATUS_CODES.OK`](src/_shared/enums/httpStatusCode.js) |
-| POST | `/users/:userId/products` | Create new product for user | [`STATUS_CODES.CREATED`](src/_shared/enums/httpStatusCode.js) |
-| PUT | `/users/:userId/products/:productId` | Update product | [`STATUS_CODES.OK`](src/_shared/enums/httpStatusCode.js) |
-| DELETE | `/users/:userId/products/:productId` | Delete product | [`STATUS_CODES.NO_CONTENT`](src/_shared/enums/httpStatusCode.js) |
+| Method | Endpoint                             | Description                 | Status Code                                                       |
+| ------ | ------------------------------------ | --------------------------- | ----------------------------------------------------------------- |
+| GET    | `/users/:userId/products`            | Get user's products         | [`STATUS_CODES.OK`](src/_shared/enums/httpStatusCodes.js)         |
+| GET    | `/users/:userId/products/:productId` | Get specific product        | [`STATUS_CODES.OK`](src/_shared/enums/httpStatusCodes.js)         |
+| POST   | `/users/:userId/products`            | Create new product for user | [`STATUS_CODES.CREATED`](src/_shared/enums/httpStatusCodes.js)    |
+| PUT    | `/users/:userId/products/:productId` | Update product              | [`STATUS_CODES.OK`](src/_shared/enums/httpStatusCodes.js)         |
+| DELETE | `/users/:userId/products/:productId` | Delete product              | [`STATUS_CODES.NO_CONTENT`](src/_shared/enums/httpStatusCodes.js) |
 
 ### Example Usage
 

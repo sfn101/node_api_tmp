@@ -1,6 +1,6 @@
 import { Router } from "express";
 import productServices from "#@/modules/product/services/index.js";
-import { STATUS_CODES } from "#@/_shared/enums/httpStatusCode.js";
+import { STATUS_CODES } from "#@/_shared/enums/httpStatusCodes.js";
 
 const router = Router({ mergeParams: true });
 

@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 
 import connectMongoDB from "#@/databases/connect-mongo.js";
 import router from "#@/routes/index.js";
-import { STATUS_CODES } from "#@/_shared/enums/httpStatusCode.js";
+import { STATUS_CODES } from "#@/_shared/enums/httpStatusCodes.js";
 
 const app = express();
 const PORT = process.env.PORT || 4000;
