@@ -1,5 +1,6 @@
 import express from "express";
 import userServices from "#@/modules/user/services/index.js";
+import { STATUS_CODES } from "#@/_shared/enums/httpStatusCode.js";
 
 const router = express.Router({ mergeParams: true });
 
@@ -12,7 +13,7 @@ router.get("/", async (req, res, next) => {
 
     const data = await userServices.fetchAll({ query });
 
-    res.status(200).json({ success: true, data });
+    res.status(STATUS_CODES.OK).json({ success: true, data });
   } catch (error) {
     next(error);
   }
@@ -26,7 +27,7 @@ router.post("/", async (req, res, next) => {
 
     const data = await userServices.createOne({ payload });
 
-    res.status(201).json({ success: true, data });
+    res.status(STATUS_CODES.CREATED).json({ success: true, data });
   } catch (error) {
     next(error);
   }

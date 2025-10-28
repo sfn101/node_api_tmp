@@ -1,5 +1,6 @@
 import { Router } from "express";
 import productServices from "#@/modules/product/services/index.js";
+import { STATUS_CODES } from "#@/_shared/enums/httpStatusCode.js";
 
 const router = Router({ mergeParams: true });
 
@@ -14,7 +15,7 @@ router.get("/", async (req, res, next) => {
       throw new Error("Product not found");
     }
 
-    res.status(200).json({ success: true, data });
+    res.status(STATUS_CODES.OK).json({ success: true, data });
   } catch (error) {
     next(error);
   }
@@ -31,7 +32,7 @@ router.delete("/", async (req, res, next) => {
       throw new Error("Product not found");
     }
 
-    res.status(200).json({ success: true, data });
+    res.status(STATUS_CODES.OK).json({ success: true, data });
   } catch (error) {
     next(error);
   }
@@ -51,7 +52,7 @@ router.put("/", async (req, res, next) => {
       throw new Error("Product not found");
     }
 
-    res.status(200).json({ success: true, data });
+    res.status(STATUS_CODES.OK).json({ success: true, data });
   } catch (error) {
     next(error);
   }
